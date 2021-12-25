@@ -1,0 +1,39 @@
+<div class="container mt-2">
+    <div class="card">
+      <div class="card-header">
+        <input type="button" class="btn btn-primary btn-sm" value="Add">
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered table-striped table-hover table-primary">
+          <thead>
+            <tr>
+              <th>Sl</th>
+              <th>Card Owner Name</th>
+              <th>Card Number</th>
+              <th>Expiry Date</th>
+              <th>CVC Number</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let payment of getAllPayments">
+              <td>{{payment.id}}</td>
+              <td>{{payment.cardOwnerName}}</td>
+              <td>{{payment.cardNumber}}</td>
+              <td>{{payment.expiryDate}}</td>
+              <td>{{payment.cvcNumber}}</td>
+              <td>{{payment.status}}</td>
+              <td>
+                <a href="javascript:void(0)" class="btn btn-success btn-sm" >Edit</a>
+                <a href="javascript:void(0)" class="btn btn-danger btn-sm ml-1" >Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+        <p class="text-success text-center m-0 p-0 lead">Practice Angular</p>
+      </div>
+    </div>
+  </div>
+  
